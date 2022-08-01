@@ -1,0 +1,17 @@
+div>.container-container {
+    display: flex;
+    padding: 10px;
+}
+
+div.header-menu {
+    background-color: rgb(223, 223, 223);
+    padding: 10px;
+}
+
+.ui.vertical.menu {
+    width: 100% !important;
+}
+
+.ui.vertical.menu .item>.menu {
+    margin: 0 !important;
+}
