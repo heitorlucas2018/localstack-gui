@@ -27,8 +27,12 @@ Some exemples:
 
 ## Commands line
  - List topics 
+    https://docs.aws.amazon.com/cli/latest/userguide/cli-services-sns.html
+    https://docs.aws.amazon.com/sns/latest/api/API_GetTopicAttributes.html
+    http://localhost:4566/000000000000/?Action=ListTopics
     ```sh
         aws --endpoint-url=http://localhost:4566 sns list-topics
+        aws sns create-topic --name my-topic
     ```
 - List queues 
     ```sh

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const LOCALSTACK_SERVICE_REST = 'http://localhost:4566/health';
-const LIST_QUEUES_REST = 'http://localhost:4566/?Action=ListQueues';
+const URL = 'http://localhost:4566/';
 const ATTRIBUTES_QUEUES_REST = '?Action=GetQueueAttributes&AttributeName.1=CreatedTimestamp&AttributeName.2=ApproximateNumberOfMessages&AttributeName.3=QueueArn';
 
 export default class Api {
@@ -15,7 +15,11 @@ export default class Api {
      * @see https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_ListDeadLetterSourceQueues.html
      */
     static async getListQueues() {
-        return await axios.get(LIST_QUEUES_REST)
+        return await axios.get(`${URL}?Action=ListQueues`)
+    }
+
+    static async getListTopics() {
+        return await axios.get(`${URL}?Action=ListTopics`)
     }
 
     /**
